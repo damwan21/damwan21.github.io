@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Huỳnh Đông Quang — CV</title>
+  <style>
+    :root{
+      --bg: #fafafa;
+      --ink: #000000; /* all text black */
+      --ring: #11111122;
+      --radius: 18px;
+      --pad: 18px;
+      /* colorful accents (pastel to keep contrast while text stays black) */
+      --c1: #ffe082; /* amber */
+      --c2: #a5d6a7; /* green */
+      --c3: #90caf9; /* blue */
+      --c4: #ffab91; /* orange */
+      --c5: #ce93d8; /* purple */
+    }
+
+    html, body { height: 100%; }
+    body{
+      margin:0; font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
+      color: var(--ink);
+      background: linear-gradient(135deg, var(--c3) 0%, #ffffff 40%, var(--c2) 100%);
+      background-attachment: fixed;
+    }
+
+    .page{
+      max-width: 1100px; margin: 24px auto; padding: clamp(12px, 3vw, 28px);
+    }
+
+    .header{
+      display: grid; gap: 16px; align-items: center;
+      grid-template-columns: 1fr; 
+      background: linear-gradient(120deg, var(--c1), var(--c4));
+      border-radius: var(--radius);
+      padding: calc(var(--pad) * 1.2);
+      box-shadow: 0 10px 30px #00000014;
+      outline: 1px solid var(--ring);
+    }
+
+    .name{ font-size: clamp(28px, 5vw, 40px); font-weight: 800; letter-spacing: 0.4px; }
+    .role{ font-size: clamp(16px, 2.4vw, 20px); font-weight: 600; opacity: .9; }
+
+    .contact{
+      display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      padding-top: 10px;
+    }
+    $1
+    .chip span, .chip a{ min-width:0; overflow-wrap:anywhere; word-break:break-word; }
+    a{ color: var(--ink); text-decoration: underline; text-underline-offset: 2px; word-break: break-word; overflow-wrap: anywhere; }
+
+    .grid{
+      margin-top: 22px; display: grid; gap: 22px; grid-template-columns: 1fr; align-items: start;
+    }
+
+    @media (min-width: 900px){
+      .header{ grid-template-columns: 2fr 3fr; }
+      .grid{ grid-template-columns: 1.1fr 2fr; }
+    }
+
+    .card{
+      background: #fff; border-radius: var(--radius); padding: var(--pad);
+      outline: 1px solid var(--ring); box-shadow: 0 10px 18px #00000012;
+    }
+
+    .card.accent1{ background: linear-gradient(180deg, #fff, var(--c3) 220%); }
+    .card.accent2{ background: linear-gradient(180deg, #fff, var(--c2) 220%); }
+    .card.accent3{ background: linear-gradient(180deg, #fff, var(--c5) 220%); }
+
+    h2{ margin: 0 0 10px; font-size: clamp(18px, 2.8vw, 22px); }
+    h3{ margin: 0; font-size: 16px; }
+    .muted{ opacity: .8; }
+    .list{ margin: 8px 0 0 0; padding-left: 18px; }
+
+    .tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+    .tag{
+      border:1px solid var(--ring); background: #ffffffcc; padding:6px 10px; border-radius: 999px; font-size: 13px; font-weight:600;
+    }
+
+    .section + .section{ margin-top: 16px; }
+
+    .two-col{ display: grid; gap: 10px; grid-template-columns: 1fr; }
+    @media(min-width:700px){ .two-col{ grid-template-columns: 1fr 1fr; } }
+
+    /* Print-friendly adjustments */
+    @media print{
+      body{ background: #fff; }
+      .page{ margin:0; }
+      a{ text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page" role="main">
+    <header class="header">
+      <div>
+        <div class="name">Huỳnh Đông Quang</div>
+        <div class="role">Security Analyst</div>
+      </div>
+      <div class="contact">
+        <div class="chip">📞 <span>0387775593</span></div>
+        <div class="chip">✉️ <a href="mailto:dongquang2110@gmail.com" rel="noopener">dongquang2110@gmail.com</a></div>
+        <div class="chip">🌐 <a href="https://github.com/damwan21" target="_blank" rel="noopener">github.com/damwan21</a></div>
+        <div class="chip">📍 <span>Da Nang, Viet Nam</span></div>
+        <div class="chip">🆔 <span>DOB: Oct 21, 2005 · Male</span></div>
+      </div>
+    </header>
+
+    <section class="grid">
+      <!-- LEFT COLUMN -->
+      <aside class="stack">
+        <div class="card accent1 section">
+          <h2>Objective</h2>
+          <p class="muted">Motivated and detail-oriented Security Analyst with a strong foundation in cybersecurity, risk management, and threat analysis. Seeking an opportunity to apply technical knowledge and analytical skills to protect organizational assets, enhance security posture, and contribute to incident response efforts.</p>
+        </div>
+
+        <div class="card accent2 section">
+          <h2>Education</h2>
+          <h3>Duy Tan University — Da Nang City</h3>
+          <p class="muted">Bachelor of Cybersecurity · Expected Graduation: 2027 · Current GPA: 3.4/4.0</p>
+        </div>
+
+        <div class="card accent3 section">
+          <h2>Technical Skills</h2>
+          <div>
+            <h3>Network Security</h3>
+            <div class="tags">
+              <span class="tag">Firewalls</span>
+              <span class="tag">IDS/IPS</span>
+              <span class="tag">VPN</span>
+            </div>
+          </div>
+          <div class="section">
+            <h3>Vulnerability Assessment &amp; Pentesting</h3>
+            <div class="tags">
+              <span class="tag">Nmap</span>
+              <span class="tag">Burp Suite</span>
+              <span class="tag">Metasploit</span>
+            </div>
+          </div>
+          <div class="section">
+            <h3>Programming &amp; Scripting</h3>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">Bash</span>
+              <span class="tag">C++</span>
+            </div>
+          </div>
+          <div class="section">
+            <h3>Languages</h3>
+            <div class="tags">
+              <span class="tag">Vietnamese</span>
+              <span class="tag">English</span>
+            </div>
+          </div>
+          <div class="section">
+            <h3>Soft Skills</h3>
+            <ul class="list">
+              <li>Analytical &amp; Problem-Solving — adept at identifying vulnerabilities and proposing improvements</li>
+              <li>Clear Communication — translates technical issues for business stakeholders</li>
+              <li>Collaboration &amp; Teamwork — works across IT, security, and business units</li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <!-- RIGHT COLUMN -->
+      <section class="stack">
+        <div class="card section">
+          <h2>Work Experience</h2>
+          <h3>Cybersecurity Analyst — VNPT (Vietnam Posts and Telecommunications Group)</h3>
+          <p class="muted">Dec 2020 – Present</p>
+          <ul class="list">
+            <li>Monitored and analyzed client system requirements, identifying risks in digital transformation projects and proposing secure IT solutions.</li>
+            <li>Built and managed a portfolio of 1,500+ enterprise clients, ensuring data protection and compliance with policies and regulations.</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h2>Activities</h2>
+          <h3>HackerOne — Bug Bounty Hunter</h3>
+          <p class="muted">Sep 2024 – Present</p>
+          <p>Collaborated with security teams through responsible disclosure programs to patch critical issues.<br>
+          Repo: <a href="https://github.com/damwan21" target="_blank" rel="noopener">github.com/damwan21</a></p>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <h2>Certifications</h2>
+            <ul class="list">
+              <li>2024 — CEH (Certified Ethical Hacker)</li>
+              <li>2023 — CCNA (Cisco Certified Network Associate)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h2>Honors &amp; Awards</h2>
+            <ul class="list">
+              <li>2024 — 3rd Place (Team) — WWF CTF (World Wide Flags Challenge)</li>
+              <li>2024 — Top 15 (Team) — Google CTF</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="card">
+            <h2>Interests</h2>
+            <ul class="list">
+              <li>Cybersecurity research and ethical hacking</li>
+              <li>Participating in CTFs and cybersecurity communities</li>
+              <li>AI applications in cybersecurity defense</li>
+              <li>Reading cybercrime case studies &amp; digital forensics</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h2>References</h2>
+            <p><strong>Master Le Van Tinh</strong><br>
+              Duy Tan University<br>
+              Email: <a href="mailto:levantinh3@dtu.edu.vn">levantinh3@dtu.edu.vn</a></p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
