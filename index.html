@@ -44,11 +44,14 @@
     .name{ font-size: clamp(28px, 5vw, 40px); font-weight: 800; letter-spacing: 0.4px; }
     .role{ font-size: clamp(16px, 2.4vw, 20px); font-weight: 600; opacity: .9; }
 
+    .avatar{ width:100px; height:100px; border-radius:50%; object-fit:cover; object-position:center; box-shadow:0 6px 16px #0000001a; border:2px solid #ffffffaa; justify-self:start; }
+    @media (min-width:900px){ .avatar{ width:120px; height:120px; } }
+
     .contact{
       display: grid; gap: 8px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       padding-top: 10px;
     }
-    $1
+    .chip{ background:#ffffffaa; border-radius:999px; padding:8px 12px; border:1px solid var(--ring); display:inline-flex; align-items:center; gap:10px; justify-content:flex-start; flex-wrap:wrap; min-width:0; }
     .chip span, .chip a{ min-width:0; overflow-wrap:anywhere; word-break:break-word; }
     a{ color: var(--ink); text-decoration: underline; text-underline-offset: 2px; word-break: break-word; overflow-wrap: anywhere; }
 
@@ -57,7 +60,9 @@
     }
 
     @media (min-width: 900px){
-      .header{ grid-template-columns: 2fr 3fr; }
+      .header{ grid-template-columns: 120px 2fr 3fr; }
+      .grid{ grid-template-columns: 1.1fr 2fr; }
+    }
       .grid{ grid-template-columns: 1.1fr 2fr; }
     }
 
@@ -96,6 +101,7 @@
 <body>
   <main class="page" role="main">
     <header class="header">
+      <img class="avatar" src="IMG_2299_1.jpg" alt="Huỳnh Đông Quang portrait"/>
       <div>
         <div class="name">Huỳnh Đông Quang</div>
         <div class="role">Security Analyst</div>
